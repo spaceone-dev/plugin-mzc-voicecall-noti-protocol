@@ -1,0 +1,3 @@
+from spaceone.notification.connector.megazone_voice_message import MegazoneVoiceMessageConnector
+
+

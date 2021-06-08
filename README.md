@@ -1,2 +1,6 @@
 # plugin-voicecall-notification-protocol
-Voice Call Notification 
+
+Plugin for Voice Call Protocol
+- Notification through Megazone Message service (Voice Call)
+
+
