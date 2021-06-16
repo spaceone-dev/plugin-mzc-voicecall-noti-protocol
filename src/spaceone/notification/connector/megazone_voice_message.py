@@ -29,9 +29,13 @@ class MegazoneVoiceMessageConnector(BaseConnector):
             'to': to,
             'body': message,
             'language': kwargs.get('language', MEGAZONE_VOICE_CONF['default']['language']),
-            'subscriptions': kwargs.get('subscriptions', MEGAZONE_VOICE_CONF['default']['subscriptions']),
             'closing': kwargs.get('closing', MEGAZONE_VOICE_CONF['default']['closing']),
         }
+
+        if 'subscriptions' in kwargs:
+            body.update({
+                'subscriptions': kwargs.get('subscriptions'),
+            })
 
         res = requests.post(request_url, data=json.dumps(body), headers=make_header(self.encode_key))
 
