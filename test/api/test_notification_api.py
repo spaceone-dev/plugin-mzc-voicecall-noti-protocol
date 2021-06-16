@@ -53,9 +53,28 @@ class TestVoiceCallNotification(TestCase):
         self.notification.Notification.dispatch({
             'options': options,
             'message': {
-                'message': 'Test..',
-                'closing': 'Complete..'
+                'title': '큰일 났어요. 큰일 났어요. 서버 확인 좀 젭알 좀.',
+                'callbacks': [{
+                    'url': 'https://google.com',
+                }]
             },
             'notification_type': 'INFO',
             'secret_data': self.secret_data
         })
+
+        """
+        Args:
+            params:
+                - options
+                - message
+                    - title
+                    - callbacks
+                        - url
+                        - options
+                - notification_type
+                - secret_data:
+                    - access_key
+                    - secret_key
+                    - phone
+                    - country_code (otpional)
+        """

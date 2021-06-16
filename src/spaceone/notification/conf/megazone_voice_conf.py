@@ -3,11 +3,8 @@ MEGAZONE_VOICE_CONF = {
     'default': {
         'flow_id': 'one-two-interaction-flow',
         'language': 'ko',
+        'message': '알람이 발생하였습니다.',
         'country_code': '82',    # KOREA
-        'subscriptions': [{
-            "type": "HTTPS",
-            "uri": "https://u5ygfuanvb.execute-api.ap-northeast-2.amazonaws.com/test/notify-test"
-        }],
         'closing': '완료되었습니다'
     }
 }
