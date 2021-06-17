@@ -30,19 +30,21 @@ class NotificationService(BaseService):
                 - secret_data:
                     - access_key
                     - secret_key
+                - channel_data
                     - phone
                     - country_code (otpional)
         """
 
         secret_data = params.get('secret_data', {})
+        channel_data = params.get('channel_data', {})
         notification_type = params['notification_type']
         params_message = params['message']
         send_message = params_message.get('title', MEGAZONE_VOICE_CONF['default']['message'])
 
         access_key = secret_data.get('access_key')
         secret_key = secret_data.get('secret_key')
-        phone = secret_data.get('phone')
-        country_code = secret_data.get('country_code', MEGAZONE_VOICE_CONF['default']['country_code'])
+        phone = channel_data.get('phone')
+        country_code = channel_data.get('country_code', MEGAZONE_VOICE_CONF['default']['country_code'])
         kwargs = {}
 
         if 'callbacks' in params_message:
