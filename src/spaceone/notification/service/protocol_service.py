@@ -14,7 +14,28 @@ class ProtocolService(BaseService):
     def init(self, params):
         """ init plugin by options
         """
-        return {'metadata': {}}
+        return {'metadata': {
+            'data_type': 'SECRET',
+            'data': {
+                'properties': {
+                    'access_key': {
+                        'minLength': 4,
+                        'title': 'Megazone Voice Access Key',
+                        'type': 'string'
+                    },
+                    'secret_key': {
+                        'minLength': 4,
+                        'title': 'Megazone Voice Secret Key',
+                        'type': 'string'
+                    }
+                },
+                'required': [
+                    'access_key',
+                    'secret_key'
+                ],
+                'type': 'object'
+            }
+        }}
 
     @transaction
     @check_required(['options'])
