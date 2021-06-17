@@ -35,6 +35,8 @@ class TestVoiceCallNotification(TestCase):
     secret_data = {
         'access_key': ACCESS_KEY,
         'secret_key': SECRET_KEY,
+    }
+    channel_data = {
         'phone': PHONE,
         'country_code': COUNTRY_CODE
     }
@@ -59,22 +61,6 @@ class TestVoiceCallNotification(TestCase):
                 }]
             },
             'notification_type': 'INFO',
-            'secret_data': self.secret_data
+            'secret_data': self.secret_data,
+            'channel_data': self.channel_data
         })
-
-        """
-        Args:
-            params:
-                - options
-                - message
-                    - title
-                    - callbacks
-                        - url
-                        - options
-                - notification_type
-                - secret_data:
-                    - access_key
-                    - secret_key
-                    - phone
-                    - country_code (otpional)
-        """
