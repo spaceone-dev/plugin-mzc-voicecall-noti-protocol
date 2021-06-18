@@ -31,8 +31,7 @@ class ProtocolService(BaseService):
                         }
                     },
                     'required': [
-                        'phone',
-                        'country_code'
+                        'phone'
                     ],
                     'type': 'object'
                 }
