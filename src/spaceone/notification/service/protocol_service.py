@@ -18,20 +18,20 @@ class ProtocolService(BaseService):
             'data_type': 'SECRET',
             'data': {
                 'properties': {
-                    'access_key': {
+                    'phone': {
                         'minLength': 4,
-                        'title': 'Megazone Voice Access Key',
+                        'title': 'Phone number to send the alarm to',
                         'type': 'string'
                     },
-                    'secret_key': {
+                    'country_code': {
                         'minLength': 4,
-                        'title': 'Megazone Voice Secret Key',
+                        'title': 'Phone country code',
                         'type': 'string'
                     }
                 },
                 'required': [
-                    'access_key',
-                    'secret_key'
+                    'phone',
+                    'country_code'
                 ],
                 'type': 'object'
             }
