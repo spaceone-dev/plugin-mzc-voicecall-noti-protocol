@@ -17,23 +17,25 @@ class ProtocolService(BaseService):
         return {'metadata': {
             'data_type': 'SECRET',
             'data': {
-                'properties': {
-                    'phone': {
-                        'minLength': 4,
-                        'title': 'Phone number to send the alarm to',
-                        'type': 'string'
+                'schema': {
+                    'properties': {
+                        'phone': {
+                            'minLength': 4,
+                            'title': 'Phone number to send the alarm to',
+                            'type': 'string'
+                        },
+                        'country_code': {
+                            'minLength': 4,
+                            'title': 'Phone country code',
+                            'type': 'string'
+                        }
                     },
-                    'country_code': {
-                        'minLength': 4,
-                        'title': 'Phone country code',
-                        'type': 'string'
-                    }
-                },
-                'required': [
-                    'phone',
-                    'country_code'
-                ],
-                'type': 'object'
+                    'required': [
+                        'phone',
+                        'country_code'
+                    ],
+                    'type': 'object'
+                }
             }
         }}
 
