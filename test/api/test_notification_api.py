@@ -56,6 +56,7 @@ class TestVoiceCallNotification(TestCase):
             'options': options,
             'message': {
                 'title': '큰일 났어요. 큰일 났어요. 서버 확인 좀 젭알 좀.',
+                'short_message': '숏메시지 테스트합니다.',
                 'callbacks': [{
                     'url': 'https://google.com',
                 }]

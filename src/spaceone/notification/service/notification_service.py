@@ -23,6 +23,7 @@ class NotificationService(BaseService):
                 - options
                 - message
                     - title
+                    - shot_message
                     - callbacks
                         - url
                         - options
@@ -39,7 +40,7 @@ class NotificationService(BaseService):
         channel_data = params.get('channel_data', {})
         notification_type = params['notification_type']
         params_message = params['message']
-        send_message = params_message.get('title', MEGAZONE_VOICE_CONF['default']['message'])
+        send_message = params_message.get('short_message', MEGAZONE_VOICE_CONF['default']['message'])
 
         access_key = secret_data.get('access_key')
         secret_key = secret_data.get('secret_key')
@@ -50,7 +51,7 @@ class NotificationService(BaseService):
         if 'callbacks' in params_message:
             subscriptions = []
 
-            send_message = f'{send_message}. 스페이스원에 응답 메시지를 보내시려면 1번을 눌러주세요.'
+            send_message = f'{send_message}. {MEGAZONE_VOICE_CONF["default"]["tail_message"]}'
             for _cb in params_message['callbacks']:
                 url = _cb.get('url')
                 endpoint = parse_endpoint(url)
