@@ -38,10 +38,8 @@ class MegazoneVoiceMessageConnector(BaseConnector):
             })
 
         _LOGGER.debug(f'[VoiceCall Params] {body}')
-
         res = requests.post(request_url, data=json.dumps(body), headers=make_header(self.encode_key))
-
-        _LOGGER.debug(f'[VoiceCall Response] Status Code: {res.status_code}')
+        _LOGGER.debug(f'[Megazone Message Response] Status: {res.status_code} {res.reason}')
 
     @staticmethod
     def string_to_base64(string):
