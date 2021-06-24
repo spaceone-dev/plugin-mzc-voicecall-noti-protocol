@@ -21,12 +21,12 @@ class ProtocolService(BaseService):
                     'properties': {
                         'phone': {
                             'minLength': 4,
-                            'title': 'Phone number to send the alarm to',
+                            'title': 'Phone Number',
                             'type': 'string'
                         },
                         'country_code': {
                             'minLength': 4,
-                            'title': 'Phone country code',
+                            'title': 'Country Code',
                             'type': 'string'
                         }
                     },
