@@ -19,7 +19,7 @@ class ProtocolService(BaseService):
             'data': {
                 'schema': {
                     'properties': {
-                        'phone': {
+                        'phone_number': {
                             'minLength': 4,
                             'title': 'Phone Number',
                             'type': 'string'
@@ -31,7 +31,7 @@ class ProtocolService(BaseService):
                         }
                     },
                     'required': [
-                        'phone'
+                        'phone_number'
                     ],
                     'type': 'object'
                 }

@@ -44,7 +44,7 @@ class NotificationService(BaseService):
 
         access_key = secret_data.get('access_key')
         secret_key = secret_data.get('secret_key')
-        phone = channel_data.get('phone')
+        phone_number = channel_data.get('phone_number')
         country_code = channel_data.get('country_code', MEGAZONE_VOICE_CONF['default']['country_code'])
         kwargs = {}
 
@@ -63,5 +63,5 @@ class NotificationService(BaseService):
             kwargs['subscriptions'] = subscriptions
 
         noti_mgr: NotificationManager = self.locator.get_manager('NotificationManager')
-        noti_mgr.dispatch(access_key, secret_key, country_code, phone, send_message, **kwargs)
+        noti_mgr.dispatch(access_key, secret_key, country_code, phone_number, send_message, **kwargs)
 
