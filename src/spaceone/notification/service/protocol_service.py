@@ -23,7 +23,7 @@ class ProtocolService(BaseService):
                             'minLength': 8,
                             'title': 'Phone Number',
                             'type': 'string',
-                            'pattern': '^[0-9.\-]{8,15}$'
+                            'pattern': '^[0-9]{8,15}$'
                         },
                         'country_code': {
                             'minLength': 1,
