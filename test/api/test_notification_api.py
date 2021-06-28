@@ -58,7 +58,7 @@ class TestVoiceCallNotification(TestCase):
                 'title': '큰일 났어요. 큰일 났어요. 서버 확인 좀 젭알 좀.',
                 'short_message': '숏메시지 테스트합니다.',
                 'callbacks': [{
-                    'url': 'https://google.com',
+                    'url': 'https://monitoring-webhook.dev.spaceone.dev/monitoring/v1/alert/alert-3b606b4b2964/2fa0eca1ed3bd4ab12564d7c6d7fc3de/ACKNOWLEDGED',
                 }]
             },
             'notification_type': 'INFO',
