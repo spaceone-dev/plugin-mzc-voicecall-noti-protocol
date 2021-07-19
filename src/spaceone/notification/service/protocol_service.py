@@ -20,16 +20,20 @@ class ProtocolService(BaseService):
                 'schema': {
                     'properties': {
                         'phone_number': {
+                            'description': 'The phone number to receive alerts. Only 8-11 digits can be entered.',
                             'minLength': 8,
                             'title': 'Phone Number',
                             'type': 'string',
-                            'pattern': '^[0-9]{8,11}$'
+                            'pattern': '^[0-9]{8,11}$',
+                            'examples': ['0104445566']
                         },
                         'country_code': {
+                            'description': 'Country code to call. Only numbers without special characters. Not mandatory, 82(Korea country code) is default.',
                             'minLength': 1,
                             'title': 'Country Code',
                             'type': 'string',
-                            'pattern': '^[0-9\-]{1,5}$'
+                            'pattern': '^[0-9\-]{1,5}$',
+                            'examples': ['82']
                         }
                     },
                     'required': [
