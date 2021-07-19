@@ -20,7 +20,7 @@ class ProtocolService(BaseService):
                 'schema': {
                     'properties': {
                         'phone_number': {
-                            'description': 'The phone number to receive alerts. Must insert the cell phone number format, and only numbers without special characters.',
+                            'description': 'The phone number to receive alerts. Only 8-11 digits can be entered.',
                             'minLength': 8,
                             'title': 'Phone Number',
                             'type': 'string',
